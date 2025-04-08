@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+
+
+body{
+    background-color: #202122;
+    color: white;
+    font-family: sans-serif;  
+    margin: 0;  
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 4px;
+}
+body::-webkit-scrollbar-track {
+    background: #202122;
+}
+body::-webkit-scrollbar-thumb {
+    background: #4b4b4d;
+    border-radius: 5px;
+}
+
+
+#alltask::-webkit-scrollbar {
+    width: 8px;
+}
+#alltask::-webkit-scrollbar-track {
+    background: #202122;
+}
+#alltask::-webkit-scrollbar-thumb {
+    background: #4b4b4d;
+    border-radius: 5px;
+}
+
+
+
+#tasklist::-webkit-scrollbar {
+    display: none;
+}
