@@ -1,16 +1,17 @@
 import { FormEvent, useState } from "react";
 
+interface LoginProps{
+  handleLogin: (email:string , password:string) => void
+}
 
-const LogIn = () => {
+const LogIn: React.FC<LoginProps> = ({handleLogin})  => {
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
-    console.log("Email:", email);
-    console.log("Password:", password);
+    handleLogin(email, password)
 
     setEmail("");
     setPassword("");

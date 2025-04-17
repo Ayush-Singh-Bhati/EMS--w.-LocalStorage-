@@ -1,11 +1,17 @@
+import { adminType } from "../../utils/localStorage"
 import AllTask from "../Tasks/AllTask"
 import CreateTask from "../Tasks/CreateTask"
 import Header from "./Header"
 
-const AdminDashboard = () => {
+interface AdminDashboardProps {
+  globalData : adminType[],
+  handleLogout: () => void
+}
+
+const AdminDashboard = ({globalData , handleLogout} : AdminDashboardProps) => {
   return (
     <> 
-    <Header/>
+    <Header globalData={globalData} handleLogout={handleLogout}/>
     <CreateTask/>
     <AllTask/>
     </>
